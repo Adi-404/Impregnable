@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Owner Registration</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts1/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css1/style.css">
+
+		<script type="text/javascript">
+		function Validate() 
+		{
+		    var password = document.getElementById("pas1").value;
+		    var confirmPassword = document.getElementById("pas2").value;
+		    if (password != confirmPassword) {
+		        alert("Passwords do not match.");
+		        return false;
+		    }
+		    return true;
+		}
+		function charonly(e) {
+		    var unicode = e.charCode ? e.charCode : e.keyCode
+		    if (unicode != 8) {
+		        if ((unicode != 32 && (unicode < 65 || (unicode > 90 && (unicode < 97 || unicode > 122)))) && unicode != 39 && unicode != 45 && unicode != 9)
+		            return false
+		    }
+		}
+		
+		function validate(evt) {
+			  var theEvent = evt || window.event;
+
+			  // Handle paste
+			  if (theEvent.type === 'paste') {
+			      key = event.clipboardData.getData('text/plain');
+			  } else {
+			  // Handle key press
+			      var key = theEvent.keyCode || theEvent.which;
+			      key = String.fromCharCode(key);
+			  }
+			  var regex = /[0-9]|\./;
+			  if( !regex.test(key) ) {
+			    theEvent.returnValue = false;
+			    if(theEvent.preventDefault) theEvent.preventDefault();
+			  }
+			};
+		
+		</script>
+		
+		
+	</head>
+
+	<body onload = "func()">
+		
+		<div class="wrapper" style="background-image: url('images/12.jpg');">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="images/11.jpg" alt="">
+				</div>
+				<form action="Ownerreg" method="post">
+					<h3>Owner Registration Form</h3>
+					
+					<div class="form-wrapper">
+						<label>OWNER ID</label>
+						<input type="text" class="form-control" name="2" id="demo" readonly>
+						<script>
+						function func(){document.getElementById("demo").value = Math.floor(Math.random() * 1000000)+ 1234;}
+						</script>
+					</div>
+					<div class="form-wrapper">
+						<input type="text" placeholder="Username" class="form-control" name="3" required onkeypress="return charonly(event)">
+						<i class="zmdi zmdi-account"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="email" placeholder="Email Address" class="form-control" name="4" required>
+						<i class="zmdi zmdi-email"></i>
+					</div>
+					
+					<div class="form-wrapper">
+						<input type="password" placeholder="Password" class="form-control" name="5" id="pas1" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="password" placeholder="Confirm Password" class="form-control" name="" id="pas2" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					
+					<div class="form-wrapper">
+						<select name="7" id="" class="form-control" required>
+							<option value="" disabled selected>Gender</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+							<option value="other">Other</option>
+						</select>
+						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+					</div>
+					
+					<div class="form-wrapper">
+						<input type="text" placeholder="Address" class="form-control" name="8" required>
+					</div>
+					<div class="form-wrapper">
+						<input type="text" placeholder="Contact" class="form-control" name="9" onkeypress='validate(event)' pattren="[0-9]{10}" maxlength="10" required>
+					</div>
+					
+					<button onclick="return Validate()">Register
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<button>
+					<center><a style="color:white" href="LoginOwner.html">LOGIN</a></center>
+					<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,287 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="util.DB"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.Connection"%>
+<!doctype html>
+<html lang="en">
+<head>
+<title>Cloud of Cloud System</title>
+	
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Indus Fact Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--// Meta tag Keywords -->
+
+	<!-- banner slider css file -->
+	<link href="cssa/JiSlider.css" rel="stylesheet">
+	<!-- //banner slider css file -->
+
+	<!-- gallery-Swipe-box -->
+	<link rel="stylesheet" href="cssa/swipebox.css">
+	<!-- //gallery-Swipe-box -->
+	
+	<!-- testimonials css -->
+	<link rel="stylesheet" href="cssa/flexslider.css" type="text/css" media="screen" property="" /><!-- flexslider css -->
+	<!-- //testimonials css -->
+
+	<!-- css files -->
+	<link rel="stylesheet" href="cssa/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="cssa/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+	<link rel="stylesheet" href="cssa/fontawesome-all.css"> <!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+	<!-- //web-fonts -->
+	
+	<!--  -->
+	<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top:50px;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd ;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color:  #f2f2f2 ;}
+#customers tr:nth-child(odd){background-color:  #f2f2f2 ;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: /* #045766 */ red;
+  color: white;
+}
+</style>
+<style type="text/css">
+body  {
+  background-image: url("images/back.jpeg");
+  background-repeat: no-repeat;
+  background-size: 2000px; 
+  background-position: center;
+}
+select{
+		  width: 40%;
+		  padding: 8px 20px;
+		  margin: 8px 0;
+		  box-sizing: border-box;
+		  border: 3px solid #555;
+		  -webkit-transition: 0.5s;
+		  transition: 0.5s;
+		  outline: none;
+		}
+		textarea{
+		  width: 80%;
+		  padding: 8px 20px;
+		  margin: 8px 0;
+		  box-sizing: border-box;
+		  border: 3px solid #555;
+		  -webkit-transition: 0.5s;
+		  transition: 0.5s;
+		  outline: none;
+		}
+		
+
+</style>
+
+</head>
+
+<body style="margin:0 auto;width:1000px" >
+	<!-- Navigation -->
+	<div class="container">
+		<!-- header top -->
+		<div class="head-wl d-md-flex py-3">
+			<div class="headder-w3 text-uppercase p-1 text-center">
+				<h1><a href="index.html">CLOUD DATA</a></h1>
+			</div>
+
+			<div class="agileinfo-social-grids text-center">
+				<h6 class="caption p-1">Follow Us</h6>
+				<ul class="d-flex justify-content-center">
+					<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+					<li><a href="#"><span class="fab fa-twitter"></span></a></li>
+					<li><a href="#"><span class="fas fa-rss"></span></a></li>
+					<li><a href="#"><span class="fab fa-vk"></span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //header top -->
+	
+		<!-- Nav bar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+		  <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+			  <li class="nav-item active">
+				<a class="nav-link" href="CharonHome.jsp">Home <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="DataOwners.jsp">OWNERS</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="DataUsers.jsp">USERS</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="metadata.jsp">META DATA</a>
+			  </li>
+			   <li class="nav-item">
+				<a class="nav-link" href="clouddata.jsp">CLOUD DATA</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="logout.jsp">LOGOUT</a>
+			  </li>
+			</ul>
+		  </div>
+		</nav>
+	<!-- Nav bar -->
+    </div>
+	<!-- //Navigation -->
+<%
+String n=(String)session.getAttribute("3");
+//out.print( "Welcome"+ n);
+String cdata =  request.getParameter("myselect");
+%>
+<form action="clouddata2.jsp" method="POST">
+    <center><label>SELECT THE STORAGE</label>&nbsp;&nbsp;<select name="myselect" id="myselect" onchange="this.form.submit()">
+        <option value="c1">Storage 1</option>
+        <option value="c2">Storage 2</option>
+        <option value="c3">Storage 3</option>
+    </select></center>
+</form>
+
+<table id="customers">
+       <thead>  
+          <tr> 
+            <th>FILE ID</th>
+            <th>DATA</th>
+            <th>CHUNK ID</th>
+            <th>NEXT CHUNK</th>
+          </tr>
+          </thead>
+             <%
+
+Statement st = null;
+ResultSet rs = null;
+
+/* To View Different Cloud Data */
+ if(cdata==null)
+{
+	
+} 
+ else if(cdata.equals("c1"))
+	{
+		try
+		{
+			Connection con = DB.getconnection1();
+			st=con.createStatement();
+			String qry =" select  * from chunk1"; 
+			rs = st.executeQuery(qry);
+			while(rs.next())
+			{
+			%>
+	  		<tbody>
+			     <tr>
+			        <td> <%=rs.getString("FID")%> </td>
+			        <td><textarea rows="4" cols="20"> <%=rs.getString("DATA")%> </textarea></td>
+			       	<td> <%=rs.getString("CHUNK")%> </td>
+			        <td><textarea rows="4" cols="20"> <%=rs.getString("SDATA")%> </textarea></td>
+			     </tr>
+			<%	
+			}	
+	
+		}
+		catch(Exception ex){out.println(ex);}
+			%>
+	       </tbody>
+	<%
+	}
+	else if(cdata.equals("c2"))
+	{
+		try
+		{
+			Connection con = DB.getconnection2();;
+			st=con.createStatement();
+			String qry =" select  * from chunk2"; 
+			rs = st.executeQuery(qry);
+			while(rs.next())
+			{
+			%>
+	  		<tbody>
+			     <tr>
+			        <td> <%=rs.getString("FID")%> </td>
+			        <td><textarea rows="4" cols="20"> <%=rs.getString("DATA")%> </textarea></td>
+			       	<td> <%=rs.getString("CHUNK")%> </td>
+			        <td><textarea rows="4" cols="20"> <%=rs.getString("SDATA")%> </textarea></td>
+			     </tr>
+			<%	
+			}	
+	
+		}
+		catch(Exception ex){out.println(ex);}
+			%>
+	       </tbody>
+			<%	
+	}
+	else if(cdata.equals("c3"))
+	{
+		try
+		{
+			Connection con = DB.getconnection3();;
+			st=con.createStatement();
+			String qry =" select  * from chunk3"; 
+			rs = st.executeQuery(qry);
+			while(rs.next())
+			{
+			%>
+	  		<tbody>
+			     <tr>
+			        <td> <%=rs.getString("FID")%> </td>
+			        <td><textarea rows="4" cols="20"> <%=rs.getString("DATA")%> </textarea></td>
+			       	<td> <%=rs.getString("CHUNK")%> </td>
+			        <td><textarea rows="4" cols="20"> <%=rs.getString("SDATA")%> </textarea></td>
+			     </tr>
+			<%	
+			}	
+	
+		}
+		catch(Exception ex){out.println(ex);}
+			%>
+	       </tbody>
+		<%
+	}
+	else
+	{
+		
+	}
+			%>
+	       </tbody>
+		       
+		     </table>     
+	  </body>
+</html>
+
+
+	
