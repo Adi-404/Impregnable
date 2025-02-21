@@ -14,7 +14,7 @@ To install the project, follow these steps:
 
 1. Clone the repository:
     ```sh
-    git clone <repository-url>
+    git clone [<repository-url>](https://github.com/Adi-404/Impregnable.git)
     ```
 2. Navigate to the project directory:
     ```sh
